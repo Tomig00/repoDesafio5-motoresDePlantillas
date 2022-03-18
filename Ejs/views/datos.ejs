@@ -1,0 +1,43 @@
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>App de Productos</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/materia/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+  <div class="col-md-4 mx-auto">
+<div class="card text-center">
+  <div class="card-header">
+    <h3>Lista de Productos</h3>
+  </div>
+  <div class="card-body">
+        <div class="table-responsive">
+                <% if(prod.length !== 0) { %>
+                  <div class="table-responsive">
+                      <table class="table table-dark">
+                          <tr style="color: green;"> <th>Titulo</th> <th>Precio</th> <th>Foto</th> </tr>
+                         <% for (const producto in prod ) { %>
+                          <tr>
+                              <td> <%= prod[producto].title %> </td>
+                              <td> <%= prod[producto].price %> </td>
+                              <td> <IMG SRC="<%= prod[producto].thumbnail %>"ALIGN=MIDDLE WIDTH=192 HEIGHT=92 ALT="AQUI VA UNA IMAGEN"></td>
+                          </tr>
+                          <% } %>
+                      </table>
+                  </div>
+                <% } else{ %> 
+                 <h3 style="color: black">No hay datos</h3>
+                <% }%>
+                <a style="color: pink" href="http://localhost:8080/" class="btn btn-primary">Ir a Formulario</a>
+               
+        </div>
+     
+  </div>
+</div>
+</div>
+
+</body>

@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <title>App de Productos</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/materia/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="col-md-4 mx-auto">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Nuevo Producto</h3>
+    </div>
+    <div class="card-body">
+      <form action="/productos" method="POST">
+        <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="Title" autofocus/>
+        </div>
+        <div class="form-group">
+          <input type="number" name="price" class="form-control" placeholder="Price" autofocus/>
+        </div>
+        <div class="form-group">
+          <input type="text" name="thumbnail" class="form-control" placeholder="Thumbnail" autofocus/>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Enviar
+          </button>
+          
+        </div>
+      </form>
+      <a href="http://localhost:8080/productos" class="btn btn-primary">Ir a productos</a>
+    </div>
+  </div>
+</div>
+
+</body>

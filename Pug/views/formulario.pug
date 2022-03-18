@@ -1,0 +1,17 @@
+html 
+  head
+    body     
+      form(action="/productos" method="post")
+        label= "Título: "
+        input(type="text" name="title" id="title")
+        label= "Precio: "
+        input(type="number" name="price" id="price")
+        label= "Foto: " 
+        input(type="text" name="thumbnail" id="thumbnail")
+        button(type="submit")="Enviar" 
+      form
+      div 
+        a(href="http://localhost:8080/productos") 
+          button="Ver tabla"
+
+

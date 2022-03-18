@@ -1,0 +1,19 @@
+html 
+    body
+    if (prod.length > 0)
+      table
+        thead
+          tr
+            th="Titulo"
+            th="Precio"
+            th="Foto"
+        tbody
+          each producto in prod
+            tr
+              td= producto.title
+              td= producto.price
+              td= IMG(SRC="producto.thumbnail"ALIGN=MIDDLE WIDTH=192 HEIGHT=92 ALT="AQUI VA UNA IMAGEN")
+      a(href="/") 
+        button="Volver al formulario"
+    else
+      div="No hay productos para mostrar"
